@@ -29,8 +29,7 @@ decrementButton.addEventListener("click", () => {
 });
 
 decrement10Button.addEventListener("click", () => {
-  if (currentCount >= 10) currentCount -= 10;
-  else currentCount = 0;
+  currentCount = Math.max(0, currentCount - 10);
   renderCount();
 });
 
@@ -38,3 +37,5 @@ resetButton.addEventListener("click", () => {
   currentCount = 0;
   renderCount();
 });
+
+renderCount();
